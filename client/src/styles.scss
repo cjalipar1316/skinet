@@ -1,3 +1,24 @@
+@use "../node_modules/@angular/material/" as mat;
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container {
+    @apply mx-auto max-w-screen-2xl px-10;
+}
+
+:root {
+    @include mat.button-overrides(
+        (
+            filled-container-shape: '6px',
+            outlined-container-shape: '6px',
+        )
+    );
+
+    @include mat.badge-overrides(
+        (
+            background-color: blue,
+        )
+    );
+}
