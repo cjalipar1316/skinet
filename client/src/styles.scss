@@ -1,12 +1,5 @@
 @use "../node_modules/@angular/material/" as mat;
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.container {
-    @apply mx-auto max-w-screen-2xl px-10;
-}
+@import "./tailwind.css";
 
 :root {
     @include mat.button-overrides(
@@ -21,4 +14,9 @@
             background-color: blue,
         )
     );
+}
+
+.match-input-height{
+    height: 3.2em !important;
+    margin-top: 0.4em;
 }
