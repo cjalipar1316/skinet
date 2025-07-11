@@ -38,6 +38,10 @@ export class ShopService {
     return this.http.get<Pagination<Product>>(environment.baseUrl+"products", {params});
   }
 
+  getProduct(id:number){
+    return this.http.get<Product>(environment.baseUrl+ "products/" + id);
+  }
+
   getBrands(){
     return this.http.get<string[]>(environment.baseUrl+"products/brands").subscribe({
       next: (response) => this.brands = response
